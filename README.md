@@ -47,3 +47,5 @@ plt.show()
 ```
 
 ![cameraman reconstruction](camera_reconstruction.png)
+
+![reconstruction error](reconstruction_error.png)
