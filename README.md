@@ -26,6 +26,7 @@ ss = np.geomspace(1.0,256.0,100)
 coeffs, wav_norm = py_cwt2d.cwt_2d(image, ss, 'mexh')
 # plot an image showing the combinations of all the scales
 errors = []
+N = 10
 fig, axes = plt.subplots(nrows=N, ncols=N, figsize=(15, 15))
 for level in range(len(ss)):
     i = level // N
@@ -39,7 +40,7 @@ for level in range(len(ss)):
     plt.imshow(reconstruction, cmap='gray')
 plt.show()
 fig2, ax2 = plt.subplots(nrows=1, ncols=1, figsize=(6, 6/1.618))
-plt.plot(errors, label=norm)
+plt.plot(errors, label='norm')
 plt.xlabel('Number of Reconstruction Scales')
 plt.ylabel('Reconstruction Error')
 plt.show()
