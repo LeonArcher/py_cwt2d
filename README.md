@@ -16,6 +16,7 @@ Import and calculate 2d cwts
 import numpy as np
 import pywt
 import py_cwt2d
+from matplotlib import pylab as plt
 
 # get an image
 image = pywt.data.camera()
